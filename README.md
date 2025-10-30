@@ -2,8 +2,7 @@
 
 ## 📘 Deskripsi Singkat
 Aplikasi **Kalori Seimbang** adalah sistem web berbasis **PHP Native** yang digunakan untuk menghitung dan menyimpan **kebutuhan kalori harian (BMR & TDEE)** pengguna.  
-Aplikasi ini dilengkapi dengan sistem **login, dashboard kalkulator, dan CRUD (Create, Read, Update, Delete)** untuk mengelola data hasil perhitungan.  
-Dibuat sebagai tugas **Praktikum Pemrograman Web A1 2024** oleh **Ayu Azzhahra Alwi (2409106022)**.
+Aplikasi ini dilengkapi dengan sistem **login, dashboard kalkulator, dan CRUD (Create, Read, Update, Delete)** untuk mengelola data hasil perhitungan.
 
 ---
 
