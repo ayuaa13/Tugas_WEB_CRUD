@@ -1,4 +1,4 @@
-// Ambil elemen dari DOM berdasarkan id
+// Ambil elemen dari halaman
 const genderInput = document.getElementById("gender");
 const ageInput = document.getElementById("age");
 const heightInput = document.getElementById("height");
@@ -8,7 +8,6 @@ const resultBMR = document.getElementById("resultBMR");
 const resultCalories = document.getElementById("resultCalories");
 const calcBtn = document.getElementById("calcBtn");
 
-// Faktor aktivitas (PAL values)
 const activityFactor = {
   "Sedentary": 1.2,
   "Lightly Active": 1.375,
@@ -17,32 +16,41 @@ const activityFactor = {
   "Extra Active": 1.9
 };
 
-// Event listener untuk tombol "Hitung Kalori"
 calcBtn.addEventListener("click", function () {
   const gender = genderInput.value;
   const age = parseInt(ageInput.value);
-  const height = parseInt(heightInput.value);
-  const weight = parseInt(weightInput.value);
+  const height = parseFloat(heightInput.value);
+  const weight = parseFloat(weightInput.value);
   const activity = activityInput.value;
 
-  // Validasi input
   if (gender === "Pilih" || !age || !height || !weight || activity === "Pilih") {
-    alert("⚠️ Harap lengkapi semua data sebelum menghitung!");
+    alert("⚠️ Lengkapi semua data dulu, ya!");
     return;
   }
 
-  // Hitung BMR dengan rumus Mifflin-St Jeor
+  // Hitung BMR
   let bmr;
   if (gender === "Pria") {
     bmr = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
-  } else if (gender === "Wanita") {
+  } else {
     bmr = 447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age);
   }
 
-  // Hitung kebutuhan kalori harian
   const dailyCalories = bmr * activityFactor[activity];
 
-  // Tampilkan hasil ke halaman
+  // Tampilkan hasil di layar
   resultBMR.textContent = `BMR (Basal Metabolic Rate): ${Math.round(bmr)} kcal`;
   resultCalories.textContent = `Kebutuhan Kalori Harian: ${Math.round(dailyCalories)} kcal`;
+
+  // Isi form tersembunyi
+  document.getElementById("formGender").value = gender;
+  document.getElementById("formAge").value = age;
+  document.getElementById("formHeight").value = height;
+  document.getElementById("formWeight").value = weight;
+  document.getElementById("formActivity").value = activity;
+  document.getElementById("formBMR").value = Math.round(bmr);
+  document.getElementById("formCalories").value = Math.round(dailyCalories);
+
+  // Kirim data otomatis tanpa konfirmasi
+  document.getElementById("saveForm").submit();
 });
