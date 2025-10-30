@@ -9,11 +9,10 @@ Aplikasi ini dilengkapi dengan sistem **login, dashboard kalkulator, dan CRUD (C
 ## ✨ Fitur yang Tersedia
 1. 🔐 **Login & Logout System** – autentikasi pengguna sebelum mengakses dashboard  
 2. 🧮 **Kalkulator Kalori Harian (BMR & TDEE)**  
-3. 💾 **Auto Save** – hasil hitung otomatis tersimpan ke database  
-4. 📊 **CRUD Data Kalori** – tambah, tampil, ubah, dan hapus data  
-5. 🧠 **Dashboard Interaktif** dengan perhitungan real-time menggunakan JavaScript  
-6. 🎨 **Tampilan Responsif & Modern** menggunakan file `style.css`  
-7. 🩺 **Tabel Data Kalori Harian** – menampilkan semua hasil perhitungan pengguna  
+3. 📊 **CRUD Data Kalori** – tambah, tampil, ubah, dan hapus data  
+4. 🧠 **Dashboard Interaktif** dengan perhitungan real-time menggunakan JavaScript  
+5. 🎨 **Tampilan Responsif & Modern** menggunakan file `style.css`  
+6. 🩺 **Tabel Data Kalori Harian** – menampilkan semua hasil perhitungan pengguna  
 
 ---
 
